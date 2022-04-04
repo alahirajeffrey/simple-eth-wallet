@@ -4,11 +4,11 @@ async function main() {
 
     // get contract to deploy
     const Wallet = await hre.ethers.getContractFactory("Wallet");
-    const wallet = await Wallet.deploy("Simple ether wallet deployed!");
+    const wallet = await Wallet.deploy();
 
     await wallet.deployed();
 
-    console.log("Wallet deployed to:", wallet.address);
+    console.log("Wallet deployed to :", wallet.address);
 }
 
 main()
